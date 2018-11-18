@@ -156,13 +156,5 @@ public class Formulario {
         return arrobaYpunto;
     }
     
-    public boolean verificarOpcionesIngresadas(String opcion1, String opcion2, String respuesta){
-        
-        if (opcion1.equals(respuesta) || opcion2.equals(respuesta)) {
-            return true;
-        }else{
-            return false;
-        }
-    }
 
 }

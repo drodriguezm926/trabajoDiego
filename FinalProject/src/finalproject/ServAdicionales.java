@@ -1,5 +1,7 @@
 package finalproject;
 
+import java.util.Scanner;
+
 public class ServAdicionales {
 
     private String tipoVuelo;
@@ -132,11 +134,22 @@ public class ServAdicionales {
     }
 
     public void setTipoVuelo(String tipoVuelo) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        while (continuar) {
 
-        if (tipoVuelo.equals("Roundtrip")) {
-            this.tipoVueloPrice = this.subTotal * 2;
-        } else {
-            this.tipoVueloPrice = this.subTotal * 1.7;
+            if (tipoVuelo.toUpperCase().equals("ROUNDTRIP")) {
+                continuar = false;
+                this.tipoVueloPrice = this.subTotal * 2;
+            } else if (tipoVuelo.toUpperCase().equals("SIMPLE")){
+                continuar = false;
+                this.tipoVueloPrice = this.subTotal * 1.7;
+            }else{
+                System.out.println("Opcion invalidad..");
+                System.out.println("Ingresa nuevamente el tipo de vuelo: Roundtrip o Simple?");
+                String nuevoValor = scanner.nextLine();
+                tipoVuelo = nuevoValor;
+            }
         }
 
         this.tipoVuelo = tipoVuelo;
