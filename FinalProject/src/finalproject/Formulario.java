@@ -143,7 +143,7 @@ public class Formulario {
         System.out.println("Tipo de servicio: Ejecutivo o economico?");
         servadicionales.setTipoServ(scanner.nextLine());
 
-        System.out.println("Codigo promocional?");
+        System.out.println("Codigo promocional? si o no");
         servadicionales.setCodigoProm(scanner.nextLine());
         
         servadicionales.setSubTotal();

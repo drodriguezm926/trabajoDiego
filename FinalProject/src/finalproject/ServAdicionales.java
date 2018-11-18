@@ -18,15 +18,13 @@ public class ServAdicionales {
     private double codigoDesc;
 
     private double tarifaBase;
-    
+
     private double totalPagar;
     private double subTotal;
 
-    
     public ServAdicionales() {
     }
-    
-    
+
     public ServAdicionales(String tipoVuelo, double tipoVueloPrice, String equipaje, double equipajePrice, String tipoPasaj, double pasajeroPrice, String alim, double alimPrice, String tipoServ, double tipoServPrice, String codigoProm, double codigoDesc, double tarifaBase, double totalPagar, double subTotal) {
         this.tipoVuelo = tipoVuelo;
         this.tipoVueloPrice = tipoVueloPrice;
@@ -50,9 +48,8 @@ public class ServAdicionales {
     }
 
     public void setCodigoProm(String codigoProm) {
-        Scanner scanner = new Scanner(System.in);
-        boolean continuar = true;
-        while (continuar) {
+
+        /* while (continuar) {
             if (codigoProm.toUpperCase().equals("NO")) {
                 continuar = false;
             } else if (codigoProm.toUpperCase().equals("SI")) {
@@ -71,13 +68,51 @@ public class ServAdicionales {
                 continuar = false;
                 this.codigoDesc = 15000;
             }
+         */
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        boolean confirmar = true;
 
+        while (continuar) {
+
+            if (codigoProm.toUpperCase().equals("SI")) {
+
+                while (confirmar) {
+                    System.out.println("ingrese codigo promocional");
+
+                    String nuevoValor = scanner.nextLine();
+                    codigoProm = nuevoValor;
+
+                    if (codigoProm.toUpperCase().equals("UCR")) {
+                        continuar = false;
+                        confirmar = false;
+                        this.codigoDesc = 15000.00;
+                    } else if (codigoProm.toUpperCase().equals("PROGRA")) {
+                        continuar = false;
+                        confirmar = false;
+                        this.codigoDesc = 15000;
+                    } else {
+                        System.out.println("Valor ingresado incorrectamente");
+                    }
+                }
+
+            } else if (codigoProm.toUpperCase().equals("NO")) {
+                continuar = false;
+            } else {
+                System.out.println("Valor ingresado incorrectamente");
+                System.out.println("Codigo promocional? si o no");
+                String repeticion = scanner.nextLine();
+                codigoProm = repeticion;
+            }
         }
 
-        this.codigoProm = codigoProm;
     }
 
-    public double getCodigoDesc() {
+     
+    this.codigoProm  = codigoProm;
+}
+
+public double getCodigoDesc() {
         return codigoDesc;
     }
 
@@ -306,7 +341,7 @@ public class ServAdicionales {
     }
     
     @Override
-    public String toString() {
+        public String toString() {
         return "ServAdicionales{" + "tipoVuelo=" + tipoVuelo + ", tipoVueloPrice=" + tipoVueloPrice + ", equipaje=" + equipaje + ", equipajePrice=" + equipajePrice + ", tipoPasaj=" + tipoPasaj + ", pasajeroPrice=" + pasajeroPrice + ", alim=" + alim + ", alimPrice=" + alimPrice + ", tipoServ=" + tipoServ + ", tipoServPrice=" + tipoServPrice + ", codigoProm=" + codigoProm + ", codigoDesc=" + codigoDesc + ", totalPagar=" + totalPagar + ", subTotal=" + subTotal + '}';
     }
  
