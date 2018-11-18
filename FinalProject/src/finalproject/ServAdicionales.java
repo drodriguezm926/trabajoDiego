@@ -49,26 +49,6 @@ public class ServAdicionales {
 
     public void setCodigoProm(String codigoProm) {
 
-        /* while (continuar) {
-            if (codigoProm.toUpperCase().equals("NO")) {
-                continuar = false;
-            } else if (codigoProm.toUpperCase().equals("SI")) {
-                continuar = false;
-                System.out.println("ingrese codigo promocional");
-
-                String nuevoValor = scanner.nextLine();
-                codigoProm = nuevoValor;
-            } 
-                
-            
-            if (codigoProm.toUpperCase().equals("UCR")) {
-                continuar = false;
-                this.codigoDesc = 15000.00;
-            } else if (codigoProm.toUpperCase().equals("PROGRA")) {
-                continuar = false;
-                this.codigoDesc = 15000;
-            }
-         */
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
         boolean confirmar = true;
@@ -105,14 +85,10 @@ public class ServAdicionales {
                 codigoProm = repeticion;
             }
         }
-
+        this.codigoProm = codigoProm;
     }
 
-     
-    this.codigoProm  = codigoProm;
-}
-
-public double getCodigoDesc() {
+    public double getCodigoDesc() {
         return codigoDesc;
     }
 
@@ -135,7 +111,7 @@ public double getCodigoDesc() {
                 this.tipoServPrice = 0.00;
             } else if (tipoServ.toUpperCase().equals("EJECUTIVO")) {
                 continuar = false;
-                this.tipoServPrice =  85000;
+                this.tipoServPrice = 85000;
             } else {
                 System.out.println("Opcion invalidad..");
                 System.out.println("Ingresa nuevamente el tipo de vuelo: Economico o Ejecutivo");
@@ -201,8 +177,7 @@ public double getCodigoDesc() {
     }
 
     public void setTotalPagar() {
-        
-        
+
         this.totalPagar = getSubTotal() - this.codigoDesc;;
     }
 
@@ -211,11 +186,11 @@ public double getCodigoDesc() {
     }
 
     public void setSubTotal() {
-        this.subTotal = this.tipoVueloPrice +
-        this.equipajePrice  +
-        this.pasajeroPrice  +
-        this.alimPrice      +
-        this.tipoServPrice;;
+        this.subTotal = this.tipoVueloPrice
+                + this.equipajePrice
+                + this.pasajeroPrice
+                + this.alimPrice
+                + this.tipoServPrice;;
     }
 
     public String getTipoVuelo() {
@@ -331,22 +306,18 @@ public double getCodigoDesc() {
         this.tipoPasaj = tipoPasaj;
 
     }
-    
-   public double getTarifaBase() {
+
+    public double getTarifaBase() {
         return tarifaBase;
     }
 
     public void setTarifaBase(double tarifaBase) {
         this.tarifaBase = tarifaBase;
     }
-    
+
     @Override
-        public String toString() {
+    public String toString() {
         return "ServAdicionales{" + "tipoVuelo=" + tipoVuelo + ", tipoVueloPrice=" + tipoVueloPrice + ", equipaje=" + equipaje + ", equipajePrice=" + equipajePrice + ", tipoPasaj=" + tipoPasaj + ", pasajeroPrice=" + pasajeroPrice + ", alim=" + alim + ", alimPrice=" + alimPrice + ", tipoServ=" + tipoServ + ", tipoServPrice=" + tipoServPrice + ", codigoProm=" + codigoProm + ", codigoDesc=" + codigoDesc + ", totalPagar=" + totalPagar + ", subTotal=" + subTotal + '}';
     }
- 
-  
-    
-    
-    
+
 }
