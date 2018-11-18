@@ -7,18 +7,7 @@ public class FinalProject {
         Formulario formulario = new Formulario();
         formulario.rellenarFormularioPersona();
         formulario.rellenarFormularioVuelos();
-        formulario.validarCorreo("diegosm0199@gmail.com");
-    
-          
-        ServAdicionales servAdicionales = new ServAdicionales();
-        
-        
-        formulario.preguntarServiciosAdicionales();
-        
-
-        System.out.println("El precio del tipo de vuelo es: " + servAdicionales.getTipoVueloPrice() + "\n"
-        + " Estimado cliente el precio total es por: " + servAdicionales.getPrecioTotal()
-        );
+      
     }
 
 }

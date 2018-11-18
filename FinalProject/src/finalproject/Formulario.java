@@ -70,9 +70,10 @@ public class Formulario {
 
     public boolean validarVuelo() {
         boolean respuesta = false;
-
+        Scanner lecturaVuelos = new Scanner(System.in);
+         
         System.out.println("Ingrese el código de vuelo: ");
-        String vueloRespuesta = scanner.nextLine();
+        String vueloRespuesta = lecturaVuelos.nextLine();
 
         vuelo.codigo = vueloRespuesta;
 
