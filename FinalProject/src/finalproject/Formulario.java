@@ -109,7 +109,7 @@ public class Formulario {
                 if (respCodigo.toUpperCase().equals("FALSE")) {
                     respuesta = false;
                     verificarTrueORFalse = false;
-                    vuelo = null;
+                    vuelo = new Vuelo();
                 } else if (respCodigo.toUpperCase().equals("TRUE")) {
                     System.out.println("Vuelo agregado!!");
                     verificarTrueORFalse = false;
