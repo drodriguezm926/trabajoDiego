@@ -7,11 +7,9 @@ public class FinalProject {
         Formulario formulario = new Formulario();
         formulario.rellenarFormularioPersona();
         formulario.rellenarFormularioVuelos();
-      ServAdicionales servAdicionales = new ServAdicionales();
-        
-        
-      formulario.preguntarServiciosAdicionales();
-        
+        ServAdicionales servAdicionales = new ServAdicionales();
+        formulario.preguntarServiciosAdicionales();
+        formulario.imprimir();
     }
 
 }

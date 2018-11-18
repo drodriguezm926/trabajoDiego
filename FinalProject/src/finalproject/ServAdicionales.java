@@ -45,18 +45,23 @@ public class ServAdicionales {
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
         while (continuar) {
+            if (codigoProm.toUpperCase().equals("NO")) {
+                continuar = false;
+            } else if (codigoProm.toUpperCase().equals("SI")) {
+                continuar = false;
+                System.out.println("ingrese codigo promocional");
 
+                String nuevoValor = scanner.nextLine();
+                codigoProm = nuevoValor;
+            } 
+                
+            
             if (codigoProm.toUpperCase().equals("UCR")) {
                 continuar = false;
                 this.codigoDesc = this.subTotal - 15000;
             } else if (codigoProm.toUpperCase().equals("PROGRA")) {
                 continuar = false;
                 this.codigoDesc = this.subTotal - 15000;
-            } else {
-                codigoProm.toUpperCase().equals("NO");
-                continuar = false;
-                this.codigoDesc = this.subTotal;
-
             }
 
         }
@@ -280,8 +285,5 @@ public class ServAdicionales {
 
     }
 
-    @Override
-    public String toString() {
-        return "tipoVuelo " + tipoVuelo + ", tipoVueloPrice " + tipoVueloPrice + ", equipaje " + equipaje + ", equipajePrice " + equipajePrice + ", subtotal " + subTotal;
-    }
+  
 }
