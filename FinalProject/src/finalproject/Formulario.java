@@ -123,9 +123,11 @@ public class Formulario {
         return respuesta;
     }
 
-    public boolean preguntarServiciosAdicionales() {
+    public void preguntarServiciosAdicionales() {
 
         Scanner scanner = new Scanner(System.in);
+        
+        servadicionales.setTarifaBase(vuelo.costo);
         System.out.println("Tipo de vuelo: Roundtrip o Simple?");
         servadicionales.setTipoVuelo(scanner.nextLine());
 
@@ -143,8 +145,9 @@ public class Formulario {
 
         System.out.println("Codigo promocional?");
         servadicionales.setCodigoProm(scanner.nextLine());
-
-        return true;
+        
+        servadicionales.setSubTotal();
+        servadicionales.setTotalPagar();
     }
 
     public boolean validarCorreo(String correo) {
