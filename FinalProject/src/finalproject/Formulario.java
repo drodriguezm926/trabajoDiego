@@ -7,13 +7,12 @@ public class Formulario {
 //Instacia del objeto Persona
     Persona persona = new Persona();
     Vuelo vuelo = new Vuelo();
-    Scanner scanner = new Scanner(System.in);
     ServAdicionales servadicionales = new ServAdicionales();
 //Metodo para rellenar formulario en consola
 
     public void rellenarFormularioPersona() {
         //Se inicia objecto scanner
-       
+        Scanner scanner = new Scanner(System.in);
         //Captura de datos
         System.out.println("*Nombre: ");
         persona.setNombre(scanner.nextLine());
@@ -124,7 +123,7 @@ public class Formulario {
 
     public boolean preguntarServiciosAdicionales() {
 
-       
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Tipo de vuelo: Roundtrip o Simple?");
         servadicionales.setTipoVuelo(scanner.nextLine());
 
