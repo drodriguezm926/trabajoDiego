@@ -42,10 +42,23 @@ public class ServAdicionales {
     }
 
     public void setCodigoProm(String codigoProm) {
-        if (this.codigoProm.equals("UCR")) {
-            this.codigoDesc = this.subTotal - 15000;
-        } else {
-            this.codigoDesc = this.subTotal;
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        while (continuar) {
+
+            if (codigoProm.toUpperCase().equals("UCR")) {
+                continuar = false;
+                this.codigoDesc = this.subTotal - 15000;
+            } else if (codigoProm.toUpperCase().equals("PROGRA")) {
+                continuar = false;
+                this.codigoDesc = this.subTotal - 15000;
+            } else {
+                codigoProm.toUpperCase().equals("NO");
+                continuar = false;
+                this.codigoDesc = this.subTotal;
+
+            }
+
         }
 
         this.codigoProm = codigoProm;
@@ -61,15 +74,28 @@ public class ServAdicionales {
 
     public String getTipoServ() {
 
-        if (tipoServ.equals("Ejecutivo")) {
-            this.tipoServPrice = this.subTotal + 85000;
-        } else {
-            this.tipoServPrice = this.subTotal;
-        }
         return tipoServ;
     }
 
     public void setTipoServ(String tipoServ) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        while (continuar) {
+
+            if (tipoServ.toUpperCase().equals("ECONOMICO")) {
+                continuar = false;
+                this.tipoServPrice = this.subTotal;
+            } else if (tipoServ.toUpperCase().equals("EJECUTIVO")) {
+                continuar = false;
+                this.tipoServPrice = this.subTotal + 85000;
+            } else {
+                System.out.println("Opcion invalidad..");
+                System.out.println("Ingresa nuevamente el tipo de vuelo: Economico o Ejecutivo");
+                String nuevoValor = scanner.nextLine();
+                tipoServ = nuevoValor;
+            }
+        }
+
         this.tipoServ = tipoServ;
     }
 
@@ -94,10 +120,22 @@ public class ServAdicionales {
     }
 
     public void setAlim(String alim) {
-        if (this.alim.equals("Si")) {
-            this.alimPrice = this.subTotal + 10000;
-        } else {
-            this.alimPrice = this.subTotal;
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        while (continuar) {
+
+            if (alim.toUpperCase().equals("SI")) {
+                continuar = false;
+                this.alimPrice = this.subTotal + 10000;
+            } else if (alim.toUpperCase().equals("NO")) {
+                continuar = false;
+                this.alimPrice = this.subTotal;
+            } else {
+                System.out.println("Opcion invalidad..");
+                System.out.println("Ingresa nuevamente el tipo de vuelo: Si o No");
+                String nuevoValor = scanner.nextLine();
+                alim = nuevoValor;
+            }
         }
         this.alim = alim;
     }
@@ -141,10 +179,10 @@ public class ServAdicionales {
             if (tipoVuelo.toUpperCase().equals("ROUNDTRIP")) {
                 continuar = false;
                 this.tipoVueloPrice = this.subTotal * 2;
-            } else if (tipoVuelo.toUpperCase().equals("SIMPLE")){
+            } else if (tipoVuelo.toUpperCase().equals("SIMPLE")) {
                 continuar = false;
                 this.tipoVueloPrice = this.subTotal * 1.7;
-            }else{
+            } else {
                 System.out.println("Opcion invalidad..");
                 System.out.println("Ingresa nuevamente el tipo de vuelo: Roundtrip o Simple?");
                 String nuevoValor = scanner.nextLine();
@@ -161,13 +199,23 @@ public class ServAdicionales {
 
     public void setEquipaje(String equipaje) {
 
-        if (tipoVuelo.equals("basic")) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        while (continuar) {
 
-        } else {
-            this.equipajePrice = this.subTotal + 35000;
+            if (equipaje.toUpperCase().equals("BASICO")) {
+                continuar = false;
+                this.equipajePrice = this.subTotal;
+            } else if (equipaje.toUpperCase().equals("ADICIONAL")) {
+                continuar = false;
+                this.equipajePrice = this.subTotal + 35000;
+            } else {
+                System.out.println("Opcion invalidad..");
+                System.out.println("Ingresa nuevamente el tipo de vuelo: Basico o Adicional?");
+                String nuevoValor = scanner.nextLine();
+                equipaje = nuevoValor;
+            }
         }
-
-        this.tipoVuelo = tipoVuelo;
 
         this.equipaje = equipaje;
     }
@@ -210,12 +258,26 @@ public class ServAdicionales {
     }
 
     public void setTipoPasaj(String tipoPasaj) {
-        this.tipoPasaj = tipoPasaj;
-        if (this.tipoPasaj.equals("Nino")) {
-            this.pasajeroPrice = this.subTotal + 0;
-        } else {
-            this.pasajeroPrice = this.subTotal + 5000;
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        while (continuar) {
+
+            if (tipoPasaj.toUpperCase().equals("NINO")) {
+                continuar = false;
+                this.pasajeroPrice = this.subTotal;
+            } else if (tipoPasaj.toUpperCase().equals("ADULTO")) {
+                continuar = false;
+                this.pasajeroPrice = this.subTotal + 5000;
+            } else {
+                System.out.println("Opcion invalidad..");
+                System.out.println("Ingresa nuevamente el tipo de vuelo: Nino o Adulto?");
+                String nuevoValor = scanner.nextLine();
+                tipoPasaj = nuevoValor;
+            }
         }
+
+        this.tipoPasaj = tipoPasaj;
+
     }
 
     @Override
