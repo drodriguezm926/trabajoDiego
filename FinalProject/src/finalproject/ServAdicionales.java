@@ -20,6 +20,10 @@ public class ServAdicionales {
     private double totalPagar;
     private double subTotal;
 
+    
+    public ServAdicionales() {
+    }
+    
     public ServAdicionales(String tipoVuelo, double tipoVueloPrice, String equipaje, double equipajePrice, String tipoPasaj, double pasajeroPrice, String alim, double alimPrice, String tipoServ, double tipoServPrice, String codigoProm, double codigoDesc, double totalPagar, double subTotal) {
         this.tipoVuelo = tipoVuelo;
         this.tipoVueloPrice = tipoVueloPrice;
@@ -37,6 +41,9 @@ public class ServAdicionales {
         this.subTotal = subTotal;
     }
 
+
+    
+    
     public String getCodigoProm() {
         return codigoProm;
     }
@@ -169,9 +176,6 @@ public class ServAdicionales {
         this.subTotal = subTotal;
     }
 
-    public ServAdicionales() {
-    }
-
     public String getTipoVuelo() {
         return tipoVuelo;
     }
@@ -291,4 +295,7 @@ public class ServAdicionales {
     }
  
   
+    
+    
+    
 }
