@@ -63,9 +63,9 @@ public class Formulario {
         System.out.println("Ingrese el código de vuelo: ");
         String vueloRespuesta = scanner.nextLine();
 
-        vuelo.codigo = vueloRespuesta;
+        vuelo.setCodigo(vueloRespuesta); 
 
-        if (vuelo.codigo.equals(vuelo.conseguirVuelo1().codigo)) {
+        if (vuelo.getCodigo().equals(vuelo.conseguirVuelo1().codigo)) {
 
             System.out.println("Código de vuelo: " + vuelo.conseguirVuelo1().codigo);
             System.out.println("Fecha de partida: " + vuelo.conseguirVuelo1().fechaPartida);
