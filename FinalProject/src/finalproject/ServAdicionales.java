@@ -285,5 +285,10 @@ public class ServAdicionales {
 
     }
 
+    @Override
+    public String toString() {
+        return "ServAdicionales{" + "tipoVuelo=" + tipoVuelo + ", tipoVueloPrice=" + tipoVueloPrice + ", equipaje=" + equipaje + ", equipajePrice=" + equipajePrice + ", tipoPasaj=" + tipoPasaj + ", pasajeroPrice=" + pasajeroPrice + ", alim=" + alim + ", alimPrice=" + alimPrice + ", tipoServ=" + tipoServ + ", tipoServPrice=" + tipoServPrice + ", codigoProm=" + codigoProm + ", codigoDesc=" + codigoDesc + ", totalPagar=" + totalPagar + ", subTotal=" + subTotal + '}';
+    }
+ 
   
 }
