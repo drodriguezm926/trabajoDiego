@@ -10,7 +10,7 @@ public class Formulario {
     ServAdicionales servadicionales = new ServAdicionales();
 //Metodo para rellenar formulario en consola
 
-    public void rellenarFormularioPersona() {
+    public  void rellenarFormularioPersona() {
         //Se inicia objecto scanner
         Scanner scanner = new Scanner(System.in);
         //Captura de datos
