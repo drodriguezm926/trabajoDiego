@@ -65,35 +65,35 @@ public class Formulario {
 
         vuelo.setCodigo(vueloRespuesta); 
 
-        if (vuelo.getCodigo().equals(vuelo.conseguirVuelo1().codigo)) {
+        if (vuelo.getCodigo().equals(vuelo.conseguirVuelo1().getCodigo())) {
 
-            System.out.println("Código de vuelo: " + vuelo.conseguirVuelo1().codigo);
-            System.out.println("Fecha de partida: " + vuelo.conseguirVuelo1().fechaPartida);
-            System.out.println("Punto de partida: " + vuelo.conseguirVuelo1().puntoPartida);
-            System.out.println("Punto de llegada: " + vuelo.conseguirVuelo1().puntoLlegada);
-            System.out.println("Duración: " + vuelo.conseguirVuelo1().duracionMinutos + " minutos");
-            System.out.println("Tarifa base: " + vuelo.conseguirVuelo1().costo + " CRC");
+            System.out.println("Código de vuelo: " + vuelo.conseguirVuelo1().getCodigo());
+            System.out.println("Fecha de partida: " + vuelo.conseguirVuelo1().getFechaPartida());
+            System.out.println("Punto de partida: " + vuelo.conseguirVuelo1().getPuntoPartida());
+            System.out.println("Punto de llegada: " + vuelo.conseguirVuelo1().getPuntoLlegada());
+            System.out.println("Fecha de llegada: " + vuelo.conseguirVuelo1().getFechaLlegada());
+            System.out.println("Duración: " + vuelo.conseguirVuelo1().getDuracionMinutos() + " minutos");
+            System.out.println("Tarifa base: " + vuelo.conseguirVuelo1().getCosto() + " CRC");
             vuelo = vuelo.conseguirVuelo1();
             respuesta = true;
-        } else if (vuelo.codigo.equals(vuelo.conseguirVuelo2().codigo)) {
-            System.out.println("Código de vuelo: " + vuelo.conseguirVuelo2().codigo);
-            System.out.println("Fecha de partida: " + vuelo.conseguirVuelo2().fechaPartida);
-            System.out.println("Punto de partida: " + vuelo.conseguirVuelo2().puntoPartida);
-            System.out.println("Punto de llegada: " + vuelo.conseguirVuelo2().puntoLlegada);
-            System.out.println("Fecha de llegada: " + vuelo.conseguirVuelo2().fechaLlegada);
-            System.out.println("Duración: " + vuelo.conseguirVuelo2().duracionMinutos + " minutos");
-            System.out.println("Tarifa base: " + vuelo.conseguirVuelo2().costo + " CRC");
+        } else if (vuelo.getCodigo().equals(vuelo.conseguirVuelo2().getCodigo())) {
+              System.out.println("Código de vuelo: " + vuelo.conseguirVuelo2().getCodigo());
+            System.out.println("Fecha de partida: " + vuelo.conseguirVuelo2().getFechaPartida());
+            System.out.println("Punto de partida: " + vuelo.conseguirVuelo2().getPuntoPartida());
+            System.out.println("Punto de llegada: " + vuelo.conseguirVuelo2().getPuntoLlegada());
+            System.out.println("Fecha de llegada: " + vuelo.conseguirVuelo2().getFechaLlegada());
+            System.out.println("Duración: " + vuelo.conseguirVuelo2().getDuracionMinutos() + " minutos");
+            System.out.println("Tarifa base: " + vuelo.conseguirVuelo2().getCosto() + " CRC");
             vuelo = vuelo.conseguirVuelo2();    
             respuesta = true;
-        } else if (vuelo.codigo.equals(vuelo.conseguirVuelo3().codigo)) {
-            System.out.println("Código de vuelo: " + vuelo.conseguirVuelo3().codigo);
-            System.out.println("Fecha de partida: " + vuelo.conseguirVuelo3().fechaPartida);
-            System.out.println("Punto de partida: " + vuelo.conseguirVuelo3().puntoPartida);
-            System.out.println("Punto de llegada: " + vuelo.conseguirVuelo3().puntoLlegada);
-            System.out.println("Duración: " + vuelo.conseguirVuelo3().duracionMinutos + " minutos");
-            System.out.println("Duración: " + vuelo.conseguirVuelo3().duracionMinutos);
-            System.out.println("Tarifa base: " + vuelo.conseguirVuelo3().costo + " CRC");
-            vuelo = vuelo.conseguirVuelo3();
+        } else if (vuelo.getCodigo().equals(vuelo.conseguirVuelo3().getCodigo())) {
+            System.out.println("Código de vuelo: " + vuelo.conseguirVuelo3().getCodigo());
+            System.out.println("Fecha de partida: " + vuelo.conseguirVuelo3().getFechaPartida());
+            System.out.println("Punto de partida: " + vuelo.conseguirVuelo3().getPuntoPartida());
+            System.out.println("Punto de llegada: " + vuelo.conseguirVuelo3().getPuntoLlegada());
+            System.out.println("Fecha de llegada: " + vuelo.conseguirVuelo3().getFechaLlegada());
+            System.out.println("Duración: " + vuelo.conseguirVuelo3().getDuracionMinutos() + " minutos");
+            System.out.println("Tarifa base: " + vuelo.conseguirVuelo3().getCosto() + " CRC");
             respuesta = true;
         }
 
@@ -127,7 +127,7 @@ public class Formulario {
 
         Scanner scanner = new Scanner(System.in);
         
-        servadicionales.setTarifaBase(vuelo.costo);
+        servadicionales.setTarifaBase(vuelo.getCosto());
         System.out.println("Tipo de vuelo: Roundtrip o Simple?");
         servadicionales.setTipoVuelo(scanner.nextLine());
 
