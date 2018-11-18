@@ -66,4 +66,11 @@ public class Vuelo {
 
         return vuelo;
     }
+
+    @Override
+    public String toString() {
+        return "Vuelo{" + "codigo=" + codigo + ", puntoPartida=" + puntoPartida + ", puntoLlegada=" + puntoLlegada + ", costo=" + costo + ", duracionMinutos=" + duracionMinutos + ", fechaLlegada=" + fechaLlegada + ", fechaPartida=" + fechaPartida + '}';
+    }
+    
+    
 }

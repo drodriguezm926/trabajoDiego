@@ -69,6 +69,18 @@ public class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
+
+    @Override
+    public String toString() {
+        return "******************Cotizacion de cliente ******************\n" + 
+                "Informacion de cliente:\n" +
+                "Nombre: " + nombre + 
+                "\nApellido: " + apellido
+                + "\nCed: " + ced + 
+                "\nEdad: "  + edad + 
+                "\nNacionalidad: " + nacionalidad
+                + "\nCorreo: " + correo + "\n\n";
+    }
     
 
  
