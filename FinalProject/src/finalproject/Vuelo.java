@@ -71,6 +71,34 @@ public class Vuelo {
     public String toString() {
         return "Vuelo{" + "codigo=" + codigo + ", puntoPartida=" + puntoPartida + ", puntoLlegada=" + puntoLlegada + ", costo=" + costo + ", duracionMinutos=" + duracionMinutos + ", fechaLlegada=" + fechaLlegada + ", fechaPartida=" + fechaPartida + '}';
     }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getPuntoPartida() {
+        return puntoPartida;
+    }
+
+    public String getPuntoLlegada() {
+        return puntoLlegada;
+    }
+
+    public int getCosto() {
+        return costo;
+    }
+
+    public int getDuracionMinutos() {
+        return duracionMinutos;
+    }
+
+    public String getFechaLlegada() {
+        return fechaLlegada;
+    }
+
+    public String getFechaPartida() {
+        return fechaPartida;
+    }
     
     
 }

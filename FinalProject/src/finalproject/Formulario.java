@@ -73,7 +73,7 @@ public class Formulario {
             System.out.println("Punto de llegada: " + vuelo.conseguirVuelo1().puntoLlegada);
             System.out.println("Duración: " + vuelo.conseguirVuelo1().duracionMinutos + " minutos");
             System.out.println("Tarifa base: " + vuelo.conseguirVuelo1().costo + " CRC");
-
+            vuelo = vuelo.conseguirVuelo1();
             respuesta = true;
         } else if (vuelo.codigo.equals(vuelo.conseguirVuelo2().codigo)) {
             System.out.println("Código de vuelo: " + vuelo.conseguirVuelo2().codigo);
@@ -83,7 +83,7 @@ public class Formulario {
             System.out.println("Fecha de llegada: " + vuelo.conseguirVuelo2().fechaLlegada);
             System.out.println("Duración: " + vuelo.conseguirVuelo2().duracionMinutos + " minutos");
             System.out.println("Tarifa base: " + vuelo.conseguirVuelo2().costo + " CRC");
-
+            vuelo = vuelo.conseguirVuelo2();    
             respuesta = true;
         } else if (vuelo.codigo.equals(vuelo.conseguirVuelo3().codigo)) {
             System.out.println("Código de vuelo: " + vuelo.conseguirVuelo3().codigo);
@@ -93,6 +93,7 @@ public class Formulario {
             System.out.println("Duración: " + vuelo.conseguirVuelo3().duracionMinutos + " minutos");
             System.out.println("Duración: " + vuelo.conseguirVuelo3().duracionMinutos);
             System.out.println("Tarifa base: " + vuelo.conseguirVuelo3().costo + " CRC");
+            vuelo = vuelo.conseguirVuelo3();
             respuesta = true;
         }
 
@@ -108,6 +109,7 @@ public class Formulario {
                 if (respCodigo.toUpperCase().equals("FALSE")) {
                     respuesta = false;
                     verificarTrueORFalse = false;
+                    vuelo = null;
                 } else if (respCodigo.toUpperCase().equals("TRUE")) {
                     System.out.println("Vuelo agregado!!");
                     verificarTrueORFalse = false;
