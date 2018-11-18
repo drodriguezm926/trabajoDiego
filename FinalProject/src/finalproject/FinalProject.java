@@ -6,9 +6,9 @@ public class FinalProject {
 
         Formulario formulario = new Formulario();
         formulario.rellenarFormularioPersona();
-        formulario.rellenarFormularioVuelos();//
-        formulario.validarCorreo("diegosm0199@gmail.com");//shfjsjghgj
-       //sadasdsadasdasd
+        formulario.rellenarFormularioVuelos();
+        formulario.validarCorreo("diegosm0199@gmail.com");
+    
           
         ServAdicionales servAdicionales = new ServAdicionales();
         
