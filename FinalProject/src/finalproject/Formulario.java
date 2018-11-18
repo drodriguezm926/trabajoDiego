@@ -160,7 +160,7 @@ public class Formulario {
 
     public void imprimir() {
       
-        System.out.println(persona + "\n" + vuelo + "\n" + servadicionales);
+        System.out.println(persona + "\n" + vuelo + "\n" + servadicionales) ;
         /*  System.out.println("cacacacacac");
         System.out.println(persona.getNombre()+ persona.getApellido() + persona.getCed() + persona.getCorreo() + persona.getNacionalidad()+ persona.getEdad()+ vuelo.codigo + vuelo.fechaPartida + vuelo.puntoPartida + vuelo.fechaLlegada + vuelo.puntoLlegada + vuelo.costo + servadicionales.getTipoVuelo() + servadicionales.getTipoVueloPrice() + servadicionales.getEquipaje()+ "\n"
                 + servadicionales.getEquipajePrice()+ servadicionales.getAlim()+ servadicionales.getAlimPrice()+ servadicionales.getTipoServ()+ servadicionales.getTipoServPrice() + servadicionales.getSubTotal() + servadicionales.getCodigoProm()+servadicionales.getCodigoDesc() + servadicionales.getTotalPagar() );
